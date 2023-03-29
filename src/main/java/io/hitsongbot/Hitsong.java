@@ -1,6 +1,7 @@
 package io.hitsongbot;
 
-import io.hitsongbot.events.PingEvent;
+import io.hitsongbot.commands.*;
+import io.hitsongbot.events.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -13,5 +14,6 @@ public class Hitsong {
                 .build();
 
         jda.addEventListener(new PingEvent());
+        jda.addEventListener(new Calculator());
     }
 }
